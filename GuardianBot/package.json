@@ -1,0 +1,14 @@
+{
+  "name": "ravenplays-guardian",
+  "version": "1.0.0",
+  "description": "Guardian Bot",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "MuninCoding/GreedyCoding",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.4.2"
+  }
+}
