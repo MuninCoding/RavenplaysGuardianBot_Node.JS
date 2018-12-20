@@ -36,7 +36,7 @@ module.exports.run = async (bot, message, args) =>
     
     //Send the report embed message to the reports channel and the channel the kick was sent from
     reportschannel.send(reportEmbed);
-    message.channel.send(reportEmbed).then(msg => msg.delete(300000));
+    message.channel.send(reportEmbed).then(msg => msg.delete(200000));
 }
 
 module.exports.help = 
