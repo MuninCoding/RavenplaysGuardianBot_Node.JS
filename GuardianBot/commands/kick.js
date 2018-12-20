@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => 
 {
     //Deletes the sent command, still not sure if catch is needed
-    message.delete().catch(O_o=>{});
+    message.delete();
 
     //Get the user intended to kick. Either the first mentioned user or the first argument of the message
     let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
@@ -36,7 +36,7 @@ module.exports.run = async (bot, message, args) =>
     
     //Send the report embed message to the reports channel and the channel the kick was sent from
     reportschannel.send(reportEmbed);
-    message.channel.send(reportEmbed);
+    message.channel.send(reportEmbed).then(msg => msg.delete(300000));
 }
 
 module.exports.help = 

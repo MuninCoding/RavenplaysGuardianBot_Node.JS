@@ -61,9 +61,12 @@ BOT.on("message", async message =>
     //Set the arguments to the rest of the array spliced by the command
     let args = messageArray.slice(1);
 
+    //Get the correct file for the sent massage and slice the message by the prefix so only the command remains
     let commandFile = BOT.commands.get(cmd.slice(prefix.length));
+    //If this commmandfile exists
     if(commandFile)
     {
+        //Run it
         commandFile.run(BOT,message,args);
     } 
 
