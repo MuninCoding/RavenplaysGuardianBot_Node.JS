@@ -1,6 +1,6 @@
 //References to the botconfig amd the token
 const BOTCONFIG = require("./botconfig.json");
-const TOKEN = require("./token.json");
+const TOKEN = require("C:/Coding/Repositories/Ravenplays Guardian Bot/TokenFiles/token.json");
 //Referemces to discord.js and node file system
 const DISCORD = require("./node_modules/discord.js");
 const FS = require("fs");
