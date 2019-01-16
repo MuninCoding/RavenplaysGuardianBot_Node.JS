@@ -9,6 +9,12 @@
   "author": "MuninCoding/GreedyCoding",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^11.4.2"
+    "discord.js": "^11.4.2",
+    "fortnite": "^4.1.1",
+    "fortnite-api": "^2.16.1",
+    "ms": "^2.1.1",
+    "node-fetch": "^2.3.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2"
   }
 }

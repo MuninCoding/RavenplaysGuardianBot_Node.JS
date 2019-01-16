@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) =>
         .addField("!report", "Reports a user, Use: !report @UserToReport -Reason to report-")
         .addField("!kick", "Kicks a user, Use: !kick @UserToKick -Reason for the kick-")
         .addField("!delete", "Deletes all messages from the channel (Doesn´t work yet)")
-
+        .addField("Written by"," MuninCoding & GreedyCoding")
         //Send the help embed message to the chat
         return message.channel.send(helpEmbed);
 }

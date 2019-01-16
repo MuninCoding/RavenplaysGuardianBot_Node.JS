@@ -1,11 +1,12 @@
 //References to the botconfig amd the token
-const BOTCONFIG = require("./botconfig.json");
-const TOKEN = require("C:/Coding/Repositories/Ravenplays Guardian Bot/TokenFiles/token.json");
+const BOT_CONFIG = require("./botconfig.json");
+const BOT_TOKEN = require("C:/Coding/Repositories/Ravenplays Guardian Bot/PrivateFiles/botTokens.json");
 //Referemces to discord.js and node file system
 const DISCORD = require("./node_modules/discord.js");
 const FS = require("fs");
 //Initializing the Bot
-const BOT = new DISCORD.Client({disableEveryone: true});
+const BOT = new DISCORD.Client({ disableEveryone: true });
+
 //Initializing a Collection for the bot commands
 BOT.commands = new DISCORD.Collection();
 
@@ -33,7 +34,7 @@ FS.readdir("./commands/", (err, files) =>
 })
 
 //Login the bot with the token provided in the botconfig
-BOT.login(TOKEN.token);
+BOT.login(BOT_TOKEN.token);
 
 //Gets executen when the bot is ready
 BOT.on("ready", async () =>  
@@ -41,7 +42,7 @@ BOT.on("ready", async () =>
     //Logs to the Windows Console that the bot is ready
     console.log(`${BOT.user.username} is now online!`);
     //Sets the Bots activity to the disired string
-    BOT.user.setActivity("BotHeaven");
+    BOT.user.setActivity("play on Ravenplays.eu");
 });
 
 //Gets executed when the bots reads messages
@@ -53,7 +54,7 @@ BOT.on("message", async message =>
     if(message.channel.type === "dm") return;
 
     //Set prefix from the botconfig
-    let prefix = BOTCONFIG.prefix;
+    let prefix = BOT_CONFIG.prefix;
     //Create a messageArray and spilt it by spaces
     let messageArray = message.content.split(" ");
     //Set cmd to the first spot in the array containing the command
